@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+       include partials/header
+    body.login
+        .contenedor-formulario
+            h1 Inicia Sesión
+            
+            if locals.mensajes
+                .alertas
+                    each categoria in Object.keys(locals.mensajes)
+                        each error in mensajes[categoria]
+                            .alerta(class=`${categoria}`)
+                                p= error
+
+            form#formulario.caja.caja-login(method="POST" action="/iniciar-sesion")
+                .campo
+                    label(for="email") E-mail:
+                    input(type="text" name="email" placeholder="Tu e-mail")
+
+                .campo
+                    label(for="password") Password:
+                    input(type="password" name="password" placeholder="Tu Password")
+
+                .campo.enviar
+                    
+                    input.boton(type="submit" value="Iniciar Sesión")
+                
+                    
+
+                .campo.acciones
+                    a(href="/crear-Cuenta") Crea tu propia Cuenta  
+                        .i.fas.fa-address-card
+
+                    a(href="/reestablecer").i.fas.fa-user-lock  ¿Olvidaste tu Contraseña?
+
