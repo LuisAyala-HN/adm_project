@@ -172,7 +172,6 @@ body.index {
     max-width: 300px;
     background-color: #10507F;
     padding-top: 1rem;
-    
 }
 
 .panel {
@@ -215,7 +214,6 @@ body.index {
 .lista-proyectos ul li a:hover {
     color: #FDD835;
     font-size: 1.2rem;
-    
 }
 
 
@@ -361,8 +359,6 @@ form.agregar-proyecto {
     transition: background-color .5s ease-in-out;
     border-bottom-right-radius: 50px;
     border-radius: 15px;
-
-    
 }
 
 form.agregar-proyecto label,
